@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --color-title-dark: #fff;
+  --color-text-dark: #aaa;
+  --padding-container: 20px;
+}
+
+body {
+  padding: var(--padding-container);
+  font-family: "Roboto", "Ubuntu", sans-serif;
+  background: #151515;
+  color: var(--color-text-dark);
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--color-title-dark);
+}
+body pre {
+  background: #1e1e1e;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  color: #ccc;
+  border: #aaa;
+}
+body pre span.tag {
+  color: #2d7fd6;
+}
+body pre span.atributo {
+  color: #83cfff;
+}
+body pre span.valor {
+  color: #ce8454;
+}
+body pre span.metodo {
+  color: #dcba6b;
+}
+body pre span.parenteses {
+  color: #fffc39;
+}/*# sourceMappingURL=style.css.map */
