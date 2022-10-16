@@ -1,22 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --color-title-dark: #fff;
   --color-text-dark: #aaa;
+  --bg-dark0: #151515;
+  --bg-dark1: #202020;
+  --title-h1: 2em;
+  --title-h2: 1.75em;
+  --title-h3: 1.5em;
+  --title-h4: 1.25em;
+  --title-h5-h6: 1em;
+  --title: "Roboto", "Ubuntu", sans-serif;
+  --texto: "Ubuntu", sans-serif;
+  --color-jq: #0765a8;
+  --color-jq-hover: #fff;
   --padding-container: 20px;
+  --padding-botao: 10px 20px;
+  --gap-min: 10px;
+  --gap-med: 20px;
+  --gap-max: 40px;
+  --largura-content: 1000px;
 }
 
 body {
-  padding: var(--padding-container);
-  font-family: "Roboto", "Ubuntu", sans-serif;
-  background: #151515;
+  font-family: var(--texto);
+  background: var(--bg-dark0);
   color: var(--color-text-dark);
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Ubuntu", sans-serif;
+body .title {
+  font-family: var(--title);
   color: var(--color-title-dark);
 }
+body .title h1 {
+  font-size: var(--title-h1);
+}
+body .title h2 {
+  font-size: var(--title-h2);
+}
+body .title h3 {
+  font-size: var(--title-h3);
+}
+body .title h4 {
+  font-size: var(--title-h4);
+}
+body .title h5, body .title h6 {
+  font-size: var(--title-h5-h6);
+}
 body pre {
-  background: #1e1e1e;
+  background: var(--bg-dark0);
   margin: 0;
   display: inline-block;
   padding: 0 10px;
@@ -37,4 +73,59 @@ body pre span.metodo {
 }
 body pre span.parenteses {
   color: #fffc39;
+}
+body a {
+  color: var(--color-jq);
+  font-weight: bold;
+  text-decoration: none;
+}
+body a:hover {
+  color: var(--color-jq-hover);
+}
+body a.btn {
+  display: inline-block;
+  padding: var(--padding-botao);
+  background: var(--bg-dark1);
+  border-radius: 5px;
+  transition: 0.5s;
+  color: var(--color-jq-hover);
+}
+body a.btn:hover {
+  background: var(--color-jq);
+}
+body .header-home {
+  display: flex;
+  justify-content: center;
+  background: var(--bg-dark1);
+  padding: var(--padding-container);
+}
+body .header-home section {
+  background: red;
+  display: flex;
+  width: 100%;
+  max-width: var(--largura-content);
+}
+body .header-home section .logo a {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-min);
+}
+body .header-home section .logo a .jq-icon {
+  fill: var(--color-jq);
+  width: 38px;
+}
+body .header-home section .logo a .logotipo {
+  font-size: var(--title-h1);
+  font-weight: bold;
+  color: var(--color-title-dark);
+}
+body .main {
+  display: flex;
+  justify-content: center;
+}
+body .main section {
+  width: 100%;
+  max-width: var(--largura-content);
+  padding: var(--gap-med);
+  background: red;
 }/*# sourceMappingURL=style.css.map */
