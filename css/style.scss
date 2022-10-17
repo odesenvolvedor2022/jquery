@@ -287,11 +287,37 @@ body{
 }
 
 @media screen and (max-width: 860px){
-    section{
-        flex-direction: column;
-        
-        .btns{
-            margin-top: var(--margin-contall);
+
+    .header-aula{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+
+        section{
+            margin: 0 auto;
+            flex-direction: column;
+            max-width: 500px !important;
+            
+            .btns{
+                justify-content: space-between;
+                padding: 0;
+                margin-top: var(--margin-contall);
+                width: calc(100% - 3*var(--padding-contall));
+    
+                .btn{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         }
-    }    
+
+    }
+
+    main{
+        margin-bottom:136px;
+
+        hr{
+            display: none;
+        }
+    }
 }

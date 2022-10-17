@@ -223,10 +223,30 @@ body .footer section div {
   }
 }
 @media screen and (max-width: 860px) {
-  section {
-    flex-direction: column;
+  .header-aula {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
-  section .btns {
+  .header-aula section {
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 500px !important;
+  }
+  .header-aula section .btns {
+    justify-content: space-between;
+    padding: 0;
     margin-top: var(--margin-contall);
+    width: calc(100% - 3 * var(--padding-contall));
+  }
+  .header-aula section .btns .btn {
+    width: 100%;
+    text-align: center;
+  }
+  main {
+    margin-bottom: 136px;
+  }
+  main hr {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
