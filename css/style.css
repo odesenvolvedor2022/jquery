@@ -4,18 +4,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--bg-dark1);
+  border-radius: var(--quadrado);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--bg-dark3);
+  border-radius: var(--quadrado);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-jq);
+}
 
 :root {
+  --color-border: #0765a8;
   --color-title-dark: #fff;
   --color-text-dark: #aaa;
+  --color-border-dark: #333;
   --bg-dark0: #151515;
   --bg-dark1: #202020;
+  --bg-dark2: #252525;
+  --bg-dark3: #303030;
   --identificador: red;
-  --title-h1: 2em;
-  --title-h2: 1.75em;
-  --title-h3: 1.5em;
-  --title-h4: 1.25em;
-  --title-h5-h6: 1em;
+  --title-h1: 2rem;
+  --title-h2: 1.5rem;
+  --title-h3: 1.3rem;
+  --title-h4: 1.2rem;
+  --title-h5-h6: 1.1rem;
+  --code-size: 0.9rem;
   --title: "Roboto", "Ubuntu", sans-serif;
   --texto: "Ubuntu", sans-serif;
   --color-jq: #0765a8;
@@ -30,10 +50,14 @@
   --gap-min: 10px;
   --gap-med: 20px;
   --gap-max: 40px;
-  --largura-content: 1000px;
+  --largura-content: 900px;
+  --quadrado: 5px;
+  --redondo: 20px;
+  --circle: 50%;
 }
 
 body {
+  width: 100vw;
   font-family: var(--texto);
   background: var(--bg-dark0);
   color: var(--color-text-dark);
@@ -42,43 +66,60 @@ body .title {
   font-family: var(--title);
   color: var(--color-title-dark);
 }
-body .title h1 {
+body h1 {
   font-size: var(--title-h1);
 }
-body .title h2 {
+body h2 {
   font-size: var(--title-h2);
 }
-body .title h3 {
+body h3 {
   font-size: var(--title-h3);
 }
-body .title h4 {
+body h4 {
   font-size: var(--title-h4);
 }
-body .title h5, body .title h6 {
+body h5, body h6 {
   font-size: var(--title-h5-h6);
 }
-body pre {
-  background: var(--bg-dark0);
-  margin: 0;
-  display: inline-block;
-  padding: 0 10px;
-  color: #ccc;
-  border: 1px solid #aaa;
+body hr {
+  border-color: var(--color-border-dark);
+  margin: var(--margin-conth);
 }
-body pre span.tag {
+body .code {
+  background: var(--bg-dark0);
+  color: #ccc;
+  border: 1px solid var(--color-border-dark);
+  margin-top: var(--margin-contall);
+  font-size: var(--code-size);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-med);
+  overflow-y: auto;
+}
+body .code code {
+  width: 100%;
+}
+body .code code .declaration {
+  padding: var(--padding-contall);
+  display: inline-flex;
+}
+body .code code .declaration span.tag {
   color: #2d7fd6;
 }
-body pre span.atributo {
+body .code code .declaration span.atributo {
   color: #83cfff;
 }
-body pre span.valor {
+body .code code .declaration span.valor {
   color: #ce8454;
 }
-body pre span.metodo {
-  color: #dcba6b;
+body .code code .declaration span.metodo {
+  color: #ffee90;
 }
-body pre span.parenteses {
-  color: #fffc39;
+body .code code .declaration span.parenteses {
+  color: #fffb00;
+}
+body .code code .tab {
+  margin: -20px 0 -20px 30px;
 }
 body div {
   display: flex;
@@ -94,7 +135,7 @@ body div a {
   text-decoration: none;
 }
 body div a:hover {
-  color: var(--color-jq-hover);
+  color: var(--color-jq-hover) jjj;
 }
 body div a.btn {
   display: inline-block;
@@ -137,9 +178,26 @@ body .main {
   justify-content: center;
 }
 body .main section {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% - var(--padding-contall));
   max-width: var(--largura-content);
   padding: var(--padding-conth);
+}
+body .main section .cards {
+  max-width: calc(100% - var(--padding-contall));
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+body .main section .cards .card {
+  max-width: 50%;
+  border: 1px solid var(--color-border);
+  flex-direction: column;
+  padding: var(--padding-contall);
+  border-radius: 5px;
+  gap: var(--gap-min);
 }
 body .main section ol {
   margin-left: 20px;
