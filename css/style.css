@@ -244,9 +244,12 @@ body .footer section div {
     text-align: center;
   }
   main {
-    margin-bottom: 136px;
+    margin-bottom: 116px;
   }
   main hr {
     display: none;
+  }
+  main .cards {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

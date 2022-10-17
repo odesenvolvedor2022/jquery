@@ -53,7 +53,7 @@
                             </p>
                         
                             <br><p class="declaration tab">
-                                <span class="atributo">document</span>.<span class="metodo">getElementById</span><span class="parenteses">(</span><span class="valor">"teste"</span><span class="parenteses">)</span>.<span class="atributo">innerHTML</span> = <span class="valor">"teste"</span>
+                                <span class="atributo">document</span>.<span class="metodo">getElementById</span><span class="parenteses">(</span><span class="valor">"teste"</span><span class="parenteses">)</span>.<span class="atributo">innerHTML</span> = <span class="valor">"teste"</span>;
                             </p>
 
                             <br><p class="declaration">
@@ -98,7 +98,7 @@
                                 <span class="metodo">html</span>
                                 <span class="parenteses">(</span>
                                 <span class="valor">"teste"</span>
-                                <span class="parenteses">)</span>
+                                <span class="parenteses">)</span>;
                             </p>
                             
                             <br><p class="declaration">
@@ -114,8 +114,8 @@
             <div class="cards">
 
                 <div class="card">
-                    <h2 class="title">Pegando um elemento no Javascript puro:</h2>
-                    <p>No exemplo abaixo, iremos pegar um elemento &lt;p&gt; com Javascript puro e pedir para preenche-lo com a palavra teste:</p>
+                    <h2 class="title">Add class a um elemento com jQuery:</h2>
+                    <p>No exemplo abaixo, iremos adicionar uma classe a um elemento &lt;p&gt;:</p>
                     <div class="code">
                         <code>
                             <p class="declaration">
@@ -135,7 +135,15 @@
                             </p>
                         
                             <br><p class="declaration tab">
-                                <span class="atributo">document</span>.<span class="metodo">getElementById</span><span class="parenteses">(</span><span class="valor">"teste"</span><span class="parenteses">)</span>.<span class="atributo">innerHTML</span> = <span class="valor">"teste"</span>
+                                <span class="metodo">$</span>
+                                <span class="parenteses">(</span>
+                                <span class="valor">'p'</span>
+                                <span class="parenteses">)</span>
+                                .
+                                <span class="metodo">addClass</span>
+                                <span class="parenteses">(</span>
+                                <span class="valor">'nome-da-classe'</span>
+                                <span class="parenteses">)</span>;
                             </p>
 
                             <br><p class="declaration">
