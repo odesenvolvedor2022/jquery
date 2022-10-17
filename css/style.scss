@@ -186,7 +186,7 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: var(--largura-content);
+            width: var(--largura-content);
             padding: var(--padding-contall);
 
             .cards{
@@ -251,8 +251,12 @@ body{
                 }
             }
             
-            ol{
+            .lista-ordem{
                 margin-left: 20px;
+
+                .item{
+                    padding: var(--gap-min);
+                }
             }
         }
     }
@@ -296,13 +300,16 @@ body{
         section{
             margin: 0 auto;
             flex-direction: column;
-            max-width: 500px !important;
+            max-width: 500px;
+
+            h1{
+                align-self: flex-start;
+            }
             
             .btns{
                 justify-content: space-between;
-                padding: 0;
                 margin-top: var(--margin-contall);
-                width: calc(100% - 3*var(--padding-contall));
+                width: 100%;
     
                 .btn{
                     width: 100%;
