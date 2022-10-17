@@ -10,6 +10,7 @@
   --color-text-dark: #aaa;
   --bg-dark0: #151515;
   --bg-dark1: #202020;
+  --identificador: red;
   --title-h1: 2em;
   --title-h2: 1.75em;
   --title-h3: 1.5em;
@@ -19,8 +20,13 @@
   --texto: "Ubuntu", sans-serif;
   --color-jq: #0765a8;
   --color-jq-hover: #fff;
-  --padding-container: 20px;
+  --padding-contall: 20px;
+  --padding-contw: 0 20px;
+  --padding-conth: 20px 0;
   --padding-botao: 10px 20px;
+  --margin-contall: 20px;
+  --margin-contw: 0 20px;
+  --margin-conth: 20px 0;
   --gap-min: 10px;
   --gap-med: 20px;
   --gap-max: 40px;
@@ -57,7 +63,7 @@ body pre {
   display: inline-block;
   padding: 0 10px;
   color: #ccc;
-  border: #aaa;
+  border: 1px solid #aaa;
 }
 body pre span.tag {
   color: #2d7fd6;
@@ -74,15 +80,23 @@ body pre span.metodo {
 body pre span.parenteses {
   color: #fffc39;
 }
-body a {
+body div {
+  display: flex;
+  -moz-column-gap: var(--gap-med);
+       column-gap: var(--gap-med);
+}
+body div.btns {
+  margin-top: var(--margin-contall);
+}
+body div a {
   color: var(--color-jq);
   font-weight: bold;
   text-decoration: none;
 }
-body a:hover {
+body div a:hover {
   color: var(--color-jq-hover);
 }
-body a.btn {
+body div a.btn {
   display: inline-block;
   padding: var(--padding-botao);
   background: var(--bg-dark1);
@@ -90,17 +104,16 @@ body a.btn {
   transition: 0.5s;
   color: var(--color-jq-hover);
 }
-body a.btn:hover {
+body div a.btn:hover {
   background: var(--color-jq);
 }
 body .header-home {
   display: flex;
   justify-content: center;
   background: var(--bg-dark1);
-  padding: var(--padding-container);
+  padding: var(--padding-contall);
 }
 body .header-home section {
-  background: red;
   display: flex;
   width: 100%;
   max-width: var(--largura-content);
@@ -126,6 +139,25 @@ body .main {
 body .main section {
   width: 100%;
   max-width: var(--largura-content);
-  padding: var(--gap-med);
-  background: red;
+  padding: var(--padding-conth);
+}
+body .main section ol {
+  margin-left: 20px;
+}
+body .footer {
+  display: flex;
+  justify-content: center;
+  background: var(--bg-dark1);
+  padding: var(--padding-contall);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+body .footer section {
+  display: flex;
+  width: 100%;
+  max-width: var(--largura-content);
+}
+body .footer section div {
+  background: var(--dentificador);
 }/*# sourceMappingURL=style.css.map */
