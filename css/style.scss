@@ -69,7 +69,7 @@
     --gap-max: 40px;
 
     // Tamanho do conteúdo
-    --largura-content: 900px;
+    --largura-content: 1440px;
 
     // Formas
     --quadrado: 5px;
@@ -113,96 +113,48 @@ body{
         margin: var(--margin-conth);
     }
 
-    .code{
-        background: var(--bg-dark0);
-        // padding: var(--padding-contall);
-        color: #ccc;
-        border: 1px solid var(--color-border-dark);
-        margin-top: var(--margin-contall);
-        font-size: var(--code-size);
-        display: flex;
-        flex-direction: column;
-        gap: var(--gap-med);
-        overflow-y: auto;
+    a{
+        color: var(--color-jq);
+        font-weight: bold;
+        text-decoration: none;
 
-        code{
-            width: 100%;
-
-            .declaration{
-                // border: 1px solid var(--color-border);
-                padding: var(--padding-contall);
-                display: inline-flex;
-    
-                span.tag{
-                    color: #2d7fd6;
-                }
-        
-                span.atributo{
-                    color: #83cfff;
-                }
-        
-                span.valor{
-                    color: #ce8454;
-                }
-        
-                span.metodo{
-                    color: #ffee90;
-                }
-        
-                span.parenteses{
-                    color: #fffb00;
-                }
-            }
-
-            .tab{
-                margin: -20px 0 -20px 30px;
-            }
-
-        }
-    }
-
-    div{
-        display: flex;
-        column-gap: var(--gap-med);
-
-        &.btns{
-            margin-top: var(--margin-contall);
+        &:hover{
+            color: var(--color-jq-hover)jjj
         }
 
-        a{
-            color: var(--color-jq);
-            font-weight: bold;
-            text-decoration: none;
-    
+        &.btn{
+            display: inline-block;
+            padding: var(--padding-botao);
+            background: var(--bg-dark3);
+            border-radius: 5px;
+            transition: .5s;
+            color: var(--color-jq-hover);
+
             &:hover{
-                color: var(--color-jq-hover)jjj
-            }
-    
-            &.btn{
-                display: inline-block;
-                padding: var(--padding-botao);
-                background: var(--bg-dark1);
-                border-radius: 5px;
-                transition: .5s;
-                color: var(--color-jq-hover);
-    
-                &:hover{
-                    background: var(--color-jq);
-                }
+                background: var(--color-jq);
             }
         }
     }
 
-    .header-home{
+    .btns{
+        display: flex;
+        align-items: center;
+        column-gap: var(--gap-med);
+    }
+
+    .header, .header-home{
         display: flex;
         justify-content: center;
+        align-items: center;
         background: var(--bg-dark1);
-        padding: var(--padding-contall);
 
         section{
             display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
             max-width: var(--largura-content);
+            padding: var(--padding-contall);
 
             .logo{
                 
@@ -234,23 +186,68 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: calc(100% - var(--padding-contall));
             max-width: var(--largura-content);
-            padding: var(--padding-conth);
+            padding: var(--padding-contall);
 
             .cards{
-                max-width: calc(100% - var(--padding-contall));
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-self: center;
+                padding: var(--padding-conth);
+                gap: var(--gap-med);
 
                 .card{
-                    max-width: 50%;
+                    display: grid;
+                    align-content: space-between;
                     border: 1px solid var(--color-border);
                     flex-direction: column;
                     padding: var(--padding-contall);
                     border-radius: 5px;
                     gap: var(--gap-min);
+                    width: 100%;
+
+                    .code{
+                        color: #ccc;
+                        border: 1px solid var(--color-border-dark);
+                        font-size: var(--code-size);
+                        width: 100%;
+                        overflow-y: auto;
+                
+                        code{
+
+                            .declaration{
+                                display: inline-flex;
+                                padding: var(--padding-contall);
+                    
+                                span.tag{
+                                    color: #2d7fd6;
+                                }
+                        
+                                span.atributo{
+                                    color: #83cfff;
+                                }
+                        
+                                span.valor{
+                                    color: #ce8454;
+                                }
+                        
+                                span.metodo{
+                                    color: #ffee90;
+                                }
+                        
+                                span.parenteses{
+                                    color: #fffb00;
+                                }
+                            }
+                
+                            .tab{
+                                margin: -40px 0 -40px 30px;
+                            }
+                
+                        }
+                    }
+
                 }
             }
             
@@ -279,4 +276,22 @@ body{
             }
         }
     }
+}
+
+@media screen and (max-width: 1440px){
+                
+    section{
+        margin-right: 12px;
+    }
+
+}
+
+@media screen and (max-width: 860px){
+    section{
+        flex-direction: column;
+        
+        .btns{
+            margin-top: var(--margin-contall);
+        }
+    }    
 }

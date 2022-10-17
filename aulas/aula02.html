@@ -10,10 +10,18 @@
 </head>
 <body>
 
+    <header class="header">
+        <section>
+            <h1 class="title">Aula 02 - Sintaxe do jQuery</h1>
+            <div class="btns">
+                <a class="btn" href="aula01.html">AULA ANTERIOR</a>
+                <a class="btn" href="#">PRÓXIMA AULA</a>
+            </div>
+        </section>
+    </header>
+
     <main class="main">
         <section>
-            
-            <h1 class="title">Aula 02 - Sintaxe do jQuery</h1>
             
             <hr>
             
@@ -29,14 +37,15 @@
                     <div class="code">
                         <code>
                             <p class="declaration">
-                                &lt;
+                                <span>&lt;</span>
                                 <span class="tag">p&nbsp;</span>
                                 <span class="atributo">id</span>
                                 =
                                 <span class="valor">"teste"</span>
-                                &gt;&lt;/
+                                <span>&gt;</span>
+                                <span>&lt;/</span>
                                 <span class="tag">p</span>
-                                &gt;
+                                <span>&gt;</span>
                             </p>
 
                             <br><p class="declaration">
@@ -63,8 +72,17 @@
                     <div class="code">
 
                         <code>
+                            
                             <p class="declaration">
-                                &lt;<span class="tag">p&nbsp;</span><span class="atributo">id</span>=<span class="valor">"teste"</span>&gt;&lt;/<span class="tag">p</span>&gt;
+                                <span>&lt;</span>
+                                <span class="tag">p&nbsp;</span>
+                                <span class="atributo">id</span>
+                                =
+                                <span class="valor">"teste"</span>
+                                <span>&gt;</span>
+                                <span>&lt;/</span>
+                                <span class="tag">p</span>
+                                <span>&gt;</span>
                             </p>
                             
                             <br><p class="declaration">
@@ -93,9 +111,42 @@
 
             </div>
 
-            <div class="btns">
-                <a class="btn" href="aula01.html">AULA ANTERIOR</a>
-                <a class="btn" href="#">PRÓXIMA AULA</a>
+            <div class="cards">
+
+                <div class="card">
+                    <h2 class="title">Pegando um elemento no Javascript puro:</h2>
+                    <p>No exemplo abaixo, iremos pegar um elemento &lt;p&gt; com Javascript puro e pedir para preenche-lo com a palavra teste:</p>
+                    <div class="code">
+                        <code>
+                            <p class="declaration">
+                                <span>&lt;</span>
+                                <span class="tag">p&nbsp;</span>
+                                <span class="atributo">id</span>
+                                =
+                                <span class="valor">"teste"</span>
+                                <span>&gt;</span>
+                                <span>&lt;/</span>
+                                <span class="tag">p</span>
+                                <span>&gt;</span>
+                            </p>
+
+                            <br><p class="declaration">
+                                &lt;<span class="tag">script</span>&gt;
+                            </p>
+                        
+                            <br><p class="declaration tab">
+                                <span class="atributo">document</span>.<span class="metodo">getElementById</span><span class="parenteses">(</span><span class="valor">"teste"</span><span class="parenteses">)</span>.<span class="atributo">innerHTML</span> = <span class="valor">"teste"</span>
+                            </p>
+
+                            <br><p class="declaration">
+                                &lt;<span class="tag">/script</span>&gt;
+                            </p>
+
+                        </code>
+                    </div>                    
+
+                </div>
+
             </div>
             
         </section>

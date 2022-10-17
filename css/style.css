@@ -50,7 +50,7 @@
   --gap-min: 10px;
   --gap-med: 20px;
   --gap-max: 40px;
-  --largura-content: 900px;
+  --largura-content: 1440px;
   --quadrado: 5px;
   --redondo: 20px;
   --circle: 50%;
@@ -85,90 +85,55 @@ body hr {
   border-color: var(--color-border-dark);
   margin: var(--margin-conth);
 }
-body .code {
-  background: var(--bg-dark0);
-  color: #ccc;
-  border: 1px solid var(--color-border-dark);
-  margin-top: var(--margin-contall);
-  font-size: var(--code-size);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-med);
-  overflow-y: auto;
-}
-body .code code {
-  width: 100%;
-}
-body .code code .declaration {
-  padding: var(--padding-contall);
-  display: inline-flex;
-}
-body .code code .declaration span.tag {
-  color: #2d7fd6;
-}
-body .code code .declaration span.atributo {
-  color: #83cfff;
-}
-body .code code .declaration span.valor {
-  color: #ce8454;
-}
-body .code code .declaration span.metodo {
-  color: #ffee90;
-}
-body .code code .declaration span.parenteses {
-  color: #fffb00;
-}
-body .code code .tab {
-  margin: -20px 0 -20px 30px;
-}
-body div {
-  display: flex;
-  -moz-column-gap: var(--gap-med);
-       column-gap: var(--gap-med);
-}
-body div.btns {
-  margin-top: var(--margin-contall);
-}
-body div a {
+body a {
   color: var(--color-jq);
   font-weight: bold;
   text-decoration: none;
 }
-body div a:hover {
+body a:hover {
   color: var(--color-jq-hover) jjj;
 }
-body div a.btn {
+body a.btn {
   display: inline-block;
   padding: var(--padding-botao);
-  background: var(--bg-dark1);
+  background: var(--bg-dark3);
   border-radius: 5px;
   transition: 0.5s;
   color: var(--color-jq-hover);
 }
-body div a.btn:hover {
+body a.btn:hover {
   background: var(--color-jq);
 }
-body .header-home {
+body .btns {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: var(--gap-med);
+       column-gap: var(--gap-med);
+}
+body .header, body .header-home {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: var(--bg-dark1);
-  padding: var(--padding-contall);
 }
-body .header-home section {
+body .header section, body .header-home section {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: var(--largura-content);
+  padding: var(--padding-contall);
 }
-body .header-home section .logo a {
+body .header section .logo a, body .header-home section .logo a {
   display: flex;
   align-items: center;
   gap: var(--gap-min);
 }
-body .header-home section .logo a .jq-icon {
+body .header section .logo a .jq-icon, body .header-home section .logo a .jq-icon {
   fill: var(--color-jq);
   width: 38px;
 }
-body .header-home section .logo a .logotipo {
+body .header section .logo a .logotipo, body .header-home section .logo a .logotipo {
   font-size: var(--title-h1);
   font-weight: bold;
   color: var(--color-title-dark);
@@ -181,23 +146,55 @@ body .main section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: calc(100% - var(--padding-contall));
   max-width: var(--largura-content);
-  padding: var(--padding-conth);
+  padding: var(--padding-contall);
 }
 body .main section .cards {
-  max-width: calc(100% - var(--padding-contall));
+  width: 100%;
   display: flex;
   justify-content: center;
   align-self: center;
+  padding: var(--padding-conth);
+  gap: var(--gap-med);
 }
 body .main section .cards .card {
-  max-width: 50%;
+  display: grid;
+  align-content: space-between;
   border: 1px solid var(--color-border);
   flex-direction: column;
   padding: var(--padding-contall);
   border-radius: 5px;
   gap: var(--gap-min);
+  width: 100%;
+}
+body .main section .cards .card .code {
+  color: #ccc;
+  border: 1px solid var(--color-border-dark);
+  font-size: var(--code-size);
+  width: 100%;
+  overflow-y: auto;
+}
+body .main section .cards .card .code code .declaration {
+  display: inline-flex;
+  padding: var(--padding-contall);
+}
+body .main section .cards .card .code code .declaration span.tag {
+  color: #2d7fd6;
+}
+body .main section .cards .card .code code .declaration span.atributo {
+  color: #83cfff;
+}
+body .main section .cards .card .code code .declaration span.valor {
+  color: #ce8454;
+}
+body .main section .cards .card .code code .declaration span.metodo {
+  color: #ffee90;
+}
+body .main section .cards .card .code code .declaration span.parenteses {
+  color: #fffb00;
+}
+body .main section .cards .card .code code .tab {
+  margin: -40px 0 -40px 30px;
 }
 body .main section ol {
   margin-left: 20px;
@@ -218,4 +215,18 @@ body .footer section {
 }
 body .footer section div {
   background: var(--dentificador);
+}
+
+@media screen and (max-width: 1440px) {
+  section {
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 860px) {
+  section {
+    flex-direction: column;
+  }
+  section .btns {
+    margin-top: var(--margin-contall);
+  }
 }/*# sourceMappingURL=style.css.map */
